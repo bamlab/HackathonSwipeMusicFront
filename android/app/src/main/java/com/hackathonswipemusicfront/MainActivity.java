@@ -11,7 +11,7 @@ import com.facebook.react.modules.core.DefaultHardwareBackBtnHandler;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
 
-import com.sh3rawi.RNAudioPlayer.*;
+import com.tricy.RNAudioPlayer.*;
 
 public class MainActivity extends Activity implements DefaultHardwareBackBtnHandler {
 

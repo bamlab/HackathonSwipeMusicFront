@@ -7,11 +7,15 @@ var {
   Text,
 } = React;
 var Card = require('./Components/Card');
-var AudioPlayer = require('react-native-audioplayer');
+var AudioPlayer = require('react-native-audio-manager');
 
 var Main = React.createClass({
   playMusic: function() {
-    AudioPlayer.play('moo.mp3');
+    AudioPlayer.play('http://d318706lgtcm8e.cloudfront.net/mp3-preview/f454c8224828e21fa146af84916fd22cb89cedc6');
+  },
+
+  stopMusic: function() {
+    AudioPlayer.stop('http://d318706lgtcm8e.cloudfront.net/mp3-preview/f454c8224828e21fa146af84916fd22cb89cedc6');
   },
 
   render: function() {
@@ -21,7 +25,10 @@ var Main = React.createClass({
           Welcome to Music Tinder!
         </Text>
         <Text style={styles.mooText} onPress={this.playMusic}>
-          Moo
+          Play
+        </Text>
+        <Text style={styles.mooText} onPress={this.stopMusic}>
+          Stop
         </Text>
         <Text style={styles.instructions}>
           Shake or press menu button for dev menu

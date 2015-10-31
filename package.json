@@ -7,6 +7,6 @@
   },
   "dependencies": {
     "react-native": "^0.13.2",
-    "react-native-audioplayer": "^0.2.0"
+    "react-native-audio-manager": "benjmichel/react-native-audio-manager"
   }
 }
