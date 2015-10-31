@@ -5,21 +5,27 @@
 'use strict';
 
 var React = require('react-native');
-var Main = require('./App/Main/Main');
+var Signup = require('./App/Signup/Signup');
 
 var {
   AppRegistry,
   StyleSheet,
   View,
+  Navigator
 } = React;
 
 
 var HackathonSwipeMusicFront = React.createClass({
   render: function() {
     return (
-      <View style={styles.container}>
-        <Main />
-      </View>
+      <Navigator
+        initialRoute={{name: 'Signup', component: Signup}}
+        renderScene={(route, navigator) => {
+          if (route.component) {
+            return React.createElement(route.component, { navigator });
+          }
+        }}
+      />
     );
   }
 });
