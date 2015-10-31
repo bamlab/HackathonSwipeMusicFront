@@ -6,6 +6,7 @@
 
 var React = require('react-native');
 var AudioPlayer = require('react-native-audioplayer');
+var Card = require('./App/Components/Card');
 
 var {
   AppRegistry,
@@ -32,6 +33,7 @@ var HackathonSwipeMusicFront = React.createClass({
         <Text style={styles.instructions}>
           Shake or press menu button for dev menu
         </Text>
+        <Card />
       </View>
     );
   }
