@@ -5,6 +5,8 @@
 'use strict';
 
 var React = require('react-native');
+var AudioPlayer = require('react-native-audioplayer');
+
 var {
   AppRegistry,
   StyleSheet,
@@ -12,15 +14,20 @@ var {
   View,
 } = React;
 
+
 var HackathonSwipeMusicFront = React.createClass({
+  playMusic: function() {
+    AudioPlayer.play('moo.mp3');
+  },
+
   render: function() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          Welcome to Music Tinder!
         </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
+        <Text style={styles.mooText} onPress={this.playMusic}>
+          Moo
         </Text>
         <Text style={styles.instructions}>
           Shake or press menu button for dev menu
@@ -41,6 +48,12 @@ var styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
+  },
+  mooText: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 10,
+    color: '#990000',
   },
   instructions: {
     textAlign: 'center',
